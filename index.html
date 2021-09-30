@@ -11,6 +11,7 @@
         <h1>HTML Week 4 - Images, Links, Forms, and Tables</h1>
         <nav>
           <a href="about.html">About</a>
+          <a href="#cats">Cats</a>
         </nav>
     </header>
     <main>
@@ -19,6 +20,78 @@
       <article>
         <a href="https://google.ca" target="_blank">Google</a>
       </article>
+
+      <article id="cats">
+        <p>things my cat does to keep me up at night</p>
+        <ul>
+          <li>Scratches at the door</li>
+          <li>Attacks my feet</li>
+          <li>Chases the other cats</li>
+        </ul>
+      </article>
+      
+      <!--The form tag defines the area of the form - when you submit, you submit all the 
+      information in that form-->
+      <form action="index.html" method="get">
+        <!--the label and the input are linked - the for attribute in the label tag must 
+          match the input id tag-->
+          <!--all form fields must have a type attribute (that defines what they are) and
+          a name attribute (that allows the place you send the information to access each field)-->
+        <p>
+          <!-- the required field will not let the form submit unless filled in-->
+          <label for="username">Name: </label>
+          <input id="username" type="text" name="username" placeholder="Bob Smith" required>
+        </p>
+        <p>
+          <!--the password field hides the characters your user types-->
+          <label for="pass">Password: </label>
+          <input id="pass" type="password">
+        </p>
+        <p>
+          <!--some inputs are more than just text, like the colour picker...-->
+          <label for="col">Pick a colour: </label>
+          <input id="col" type="color">
+        </p>
+        <p>
+          <!--the value attribute sets a default starting value for the form field-->
+          <label for="num">Pick a number: </label>
+          <input id="num" type="range" name="num" value="4">
+        </p>
+        <p>
+          <!--text area is for multiple lines of text-->
+          <label for="info">Enter the info: </label>
+          <textarea id="info" name="info"></textarea>
+        </p>
+        <p>
+          <!--the select tag is the dropdown menu, and the option tags are each item in the dropdown-->
+          <label for="vegetable">Choose your veggie:</label>
+          <select id="vegetable" name="vegetable"> 
+            <!--option tags must have a value, the value is the information that gets sent with the form-->
+            <option value="default">Choose one...</option>
+            <option value="carrot"> Carrot</option>
+            <option value="brocolli"> Brocolli</option>
+            <option value="cucumber"> Cucumber</option>
+          </select> 
+        </p>
+        <p>
+          <!-- the checked attribute on a checkbox makes it start off checked-->
+          <label for="spam">Spam me: </label>
+          <input type="checkbox" id="spam" name="spam" checked>
+        </p>
+        <p>
+          <span>Do you like dogs? </span>
+          <label for="yes"> Yes! </label>
+          <input type="radio" id="yes" name="dogs">
+          <label for="no">No...</label>
+          <input type="radio" id="no" name="dogs">
+        </p>
+        <p>
+          <!-- the submit button actually submits the form-->
+          <!--once the form is submitted if you used "get" mode the information will be visible 
+          in the URL the "post" mode will submit the form info more privately and securely-->
+          <button type="sumbit" name="submit">Submit!</button>
+        </p>
+      </form>
     </main>
     <footer>
         <article>&copy; Somebody, Somewhere, 2021</article>
